@@ -10,6 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('keygen', function () {
+
+    \Artisan::call('key:generate');
+
+    dd("Key made");
+
+});
+
 Route::get('/AdminHome', 'PagesController@adhome');
 Route::get('/contact', 'PagesController@contact');
 Route::post('/contact', 'PagesController@postcontact');
